@@ -1,0 +1,22 @@
+<table class="table table-striped" *ngIf="paisID">
+    <thead>
+        <tr>
+            <th scope="col">Nombre oficial</th>
+            <th scope="col">Capital</th>
+            <th scope="col">Subregión</th>
+            <th scope="col">Mapa</th>
+            <th scope="col">Bandera</th>
+            <th scope="col">Continente</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{paisID.name.official}}</td>
+            <td>{{paisID.capital}}</td>
+            <td>{{paisID.subregion}}</td>
+            <td><button class="btn btn-danger"><a href="{{paisID.maps.googleMaps}}" style="color:white; text-decoration: none;">Ir a Maps</a></button></td>
+            <td><img src="{{paisID.flags.png}}" alt="Bandera del país" width="60"></td>
+            <td>{{paisID.continents}}</td>
+        </tr>
+    </tbody>
+</table>

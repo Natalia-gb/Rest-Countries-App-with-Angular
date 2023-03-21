@@ -1,0 +1,19 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Bandera</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Población</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let pais of paises; let i = index">
+            <th scope="row">{{i + 1}}</th>
+            <td><img width="30" src="{{pais.flags.png}}" alt=""></td>
+            <td>{{pais.name.common}}</td>
+            <td>{{pais.population | number}}</td>
+            <td><button class="btn btn-success"><a [routerLink]="['/busqueda-paises', pais.cca2]" style="color: white; text-decoration: none;">Más información</a></button></td>
+        </tr>
+    </tbody>
+</table>

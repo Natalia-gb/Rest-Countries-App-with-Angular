@@ -1,0 +1,5 @@
+<div class="input-group mb-3">
+    <input type="text" class="form-control" 
+    [placeholder]="placeholder" aria-label="Busca algún país" 
+    aria-describedby="button-addon2" #busqueda (keyup.enter)="buscar(busqueda.value)">
+</div>

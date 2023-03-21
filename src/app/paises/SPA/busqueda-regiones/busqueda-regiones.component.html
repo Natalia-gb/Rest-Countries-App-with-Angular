@@ -1,0 +1,19 @@
+<div class="m-4">
+    <!-- <button [class.btn-primary]="regionActiva===item" [class.text-light]="regionActiva===item" *ngFor="let item of continentes" class="btn btn-outline-primary" 
+        (click)="buscarContinente(item)">{{item}}
+    </button> -->
+    <!-- <button [ngClass]="{'btn-primary':regionActiva===item, 'btn-outline-primary':regionActiva!=item}" *ngFor="let item of continentes" class="btn btn-outline-primary" 
+        (click)="buscarContinente(item)">{{item}}
+    </button> -->
+    <!-- <button [class]="(regionActiva===item)? 'btn-primary': 'btn-outline-primary'" *ngFor="let item of continentes" class="btn" 
+        (click)="buscarContinente(item)">{{item}}
+    </button> -->
+    <button [class]="cambiarCss(item)" *ngFor="let item of continentes" class="btn" 
+        (click)="buscarContinente(item)">{{item}}
+    </button>
+</div>
+
+<div *ngIf="paisesRegion.length > 0">
+    <app-tabla [paises]="paisesRegion"></app-tabla>
+</div>
+
